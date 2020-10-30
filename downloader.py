@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
-schedule = requests.get('https://oneforest.net/dd_dn/4039')
+schedule = requests.get('https://oneforest.net/dd_dn/4039') #this link is board link
 schedule_html = schedule.text
 
 soup = BeautifulSoup(schedule_html, 'html.parser')
@@ -18,4 +18,6 @@ for index in scr:
       except:
             pass
 final = 'https://oneforest.net' + adress
+
+#final is final download link
 print(final)
